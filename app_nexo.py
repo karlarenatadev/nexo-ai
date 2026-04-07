@@ -112,8 +112,13 @@ if botao_gerar:
             
             # --- RESULTADO E COMPARTILHAMENTO ---
             if texto_gerado:
-                st.code(texto_gerado, language="markdown")
-                
+                st.subheader("📝 Seu Comunicado")
+
+                texto_final = st.text_area(
+                    "Revise e edite se necessário:", 
+                    value=texto_gerado, 
+                    height=250)
+                    
                 st.write("---")
                 st.markdown("### 🚀 Enviar Para:")
                 

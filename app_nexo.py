@@ -129,7 +129,6 @@ if botao_gerar:
 
                 st_copy_to_clipboard(texto_final, before_copy_label="📋 Copiar comunicado")
                     
-                st.write("---")
                 st.markdown("### 🚀 Enviar Para:")
 
                 texto_codificado = urllib.parse.quote(texto_final) 

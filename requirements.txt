@@ -3,3 +3,4 @@ google-genai
 python-dotenv
 pandas
 cohere
+st-copy-to-clipboard

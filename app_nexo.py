@@ -1,10 +1,11 @@
 import streamlit as st
 import os
 import urllib.parse
+from st_copy_to_clipboard import st_copy_to_clipboard
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
-import cohere # NOVA IA DE CONTINGÊNCIA
+import cohere # IA DE CONTINGÊNCIA
 
 # 1. Carregamento de Credenciais
 load_dotenv()
@@ -114,15 +115,22 @@ if botao_gerar:
             if texto_gerado:
                 st.subheader("📝 Seu Comunicado")
 
+                num_linhas = texto_gerado.count('\n') + 5
+
+                altura_dinamica = max(200, num_linhas * 25)
+
                 texto_final = st.text_area(
                     "Revise e edite se necessário:", 
                     value=texto_gerado, 
-                    height=250)
+                    height=altura_dinamica)
+
+                st_copy_to_clipboard(texto_final, before_copy_label="📋 Copiar comunicado")
                     
                 st.write("---")
                 st.markdown("### 🚀 Enviar Para:")
+
+                texto_codificado = urllib.parse.quote(texto_final) 
                 
-                texto_codificado = urllib.parse.quote(texto_gerado)
                 col_btn1, col_btn2 = st.columns(2)
                 
                 with col_btn1:

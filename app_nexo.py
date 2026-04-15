@@ -43,9 +43,11 @@ REGRAS:
 4. Se o tom for "Informal", escreva para a squad técnica, tribo ou para o WhatsApp do cliente de forma mais leve, ágil e parceira.
 5. Quando o assunto for "Risco" ou "Atraso", seja transparente, mas sempre adicione um tom de que a equipe já está buscando a solução.
 6. Entregue APENAS o texto gerado, sem saudações iniciais ou explicações do que você fez.
-7. REGRA CRÍTICA DE FORMATAÇÃO: NUNCA utilize asteriscos (*), hashtags (#) ou qualquer formatação Markdown. Entregue o texto em formato plano (plain text) puro, para que fique limpo e pronto para ser copiado.
+7. REGRA CRÍTICA DE FORMATAÇÃO: NUNCA utilize asteriscos (*), hashtags (#) ou qualquer formatação Markdown. Entregue o texto em formato plano (plain text) puro.
+8. FILTRO DE CNV: Se o usuário inserir desabafos, reclamações pessoais ou linguagem agressiva (ex: "fulano é preguiçoso"), transforme o texto usando Comunicação Não-Violenta. Foque no processo, nos gargalos e na solução, nunca atacando o indivíduo.
+9. ANTI-ALUCINAÇÃO: Nunca invente prazos, métricas ou nomes que não foram fornecidos nas palavras-chave. Se faltar alguma informação essencial para o contexto, utilize marcadores como [INSERIR DATA] ou [INSERIR NOME].
+10. CALL TO ACTION (CTA): Sempre finalize o comunicado sugerindo um próximo passo claro (ex: pedir uma aprovação, sugerir uma call de alinhamento ou pedir confirmação de leitura).
 """
-
 configuracao_gemini = types.GenerateContentConfig(
     system_instruction=instrucoes_sistema,
 )
